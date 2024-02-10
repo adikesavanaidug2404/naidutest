@@ -33,7 +33,7 @@ pipeline {
         }
         stage('Deploy to Tomcat') {
             steps {
-                sh "sudo scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/naidu/webapp/target/webapp.war root@54.160.138.39:/opt/tomcat/webapps/"
+                sh "sudo scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/naidutest/webapp/target/webapp.war root@54.160.138.39:/opt/tomcat/webapps/"
             }
         }
         stage('Docker Image Build&Tag') {
